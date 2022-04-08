@@ -64,7 +64,6 @@ python run_enhancer.py \
     --per_gpu_eval_batch_size=128   \
     --per_gpu_train_batch_size=32   \
     --learning_rate 4e-4 \
-    --num_train_epochs 5.0 \
     --max_steps $STEP \
     --output_dir $OUTPUT_PATH \
     --evaluate_during_training \

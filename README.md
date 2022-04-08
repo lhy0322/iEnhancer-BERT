@@ -42,12 +42,12 @@ Use "data_precess_layer2.py" file to generate k-mer sequences files from FASTA f
 Use "run_train.py" or
 
 ```
-cd examples
 export KMER=3
 export MODEL_PATH=pretrain_model/3-new-12w-0
 export DATA_PATH=data_process_template/data/layer1_3mer
 export OUTPUT_PATH=result
 export STEP=200
+
 python run_enhancer.py \
     --model_type dna \
     --tokenizer_name=$MODEL_PATH/vocab.txt \
@@ -80,6 +80,7 @@ export KMER=3
 export MODEL_PATH=result
 export DATA_PATH=data_process_template/data/layer1_3mer
 export PREDICTION_PATH=predict/layer1
+
 python run_enhancer.py \
     --model_type dna \
     --tokenizer_name=$MODEL_PATH/vocab.txt \

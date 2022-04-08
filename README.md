@@ -1,5 +1,6 @@
 # iEnhancer-BERT
 We propose iEnhancer-BERT, a novel transfer learning method based on pre-trained DNA language model using the whole human genome. More specifically, iEnhancer-BERT consists of a BERT layer for feature extrac-tion and a CNN layer for classification. We initialize our parameters of the BERT layer using a pre-trained DNA language model, and fine-tune it with transfer learning on the enhancer identification tasks. Unlike common fine-tuning strate-gies, we extract the output of all Transformer Encoder layers to form the feature vector. Experiments show that our method achieves state-of-the-art results in both enhancer identification tasks and strong enhancer identification tasks.
+![Image browser window](figure.png)
 ## 1. Environment setup
 
 We recommend you to build a python virtual environment with [Anaconda](https://docs.anaconda.com/anaconda/install/linux/). We applied training on a single NVIDIA Tesla V100 with 32 GB graphic memory. If you use GPU with other specifications and memory sizes, consider adjusting your batch size accordingly.

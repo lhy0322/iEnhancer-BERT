@@ -32,13 +32,14 @@ unzip 4-new-12w-0.zip
 unzip 5-new-12w-0.zip
 unzip 6-new-12w-0.zip
 ```
-## 3. Training
+## 3. Model pipeline
 #### 3.1 Data processing
 Use "data_precess_layer1.py" file to generate k-mer sequences files from FASTA file (enhancer identification task)
+
 Use "data_precess_layer2.py" file to generate k-mer sequences files from FASTA file (strong enhancer identification task)
 
 #### 3.2 Train
-Use "run.py" or
+Use "run_train.py" or
 
 ```
 cd examples
@@ -47,7 +48,7 @@ export MODEL_PATH=pretrain_model/3-new-12w-0
 export DATA_PATH=data_process_template/data/layer1_3mer
 export OUTPUT_PATH=result
 export STEP=200
-python run_finetune.py \
+python run_enhancer.py \
     --model_type dna \
     --tokenizer_name=$MODEL_PATH/vocab.txt \
     --model_name_or_path $MODEL_PATH \
@@ -70,4 +71,25 @@ python run_finetune.py \
     --overwrite_output \
     --weight_decay 0.01 \
     --n_process 8
+```
+#### 3.2 Test
+Use "run_predict.py" or
+
+```
+export KMER=3
+export MODEL_PATH=result
+export DATA_PATH=data_process_template/data/layer1_3mer
+export PREDICTION_PATH=predict/layer1
+python run_enhancer.py \
+    --model_type dna \
+    --tokenizer_name=$MODEL_PATH/vocab.txt \
+    --model_name_or_path $MODEL_PATH \
+    --task_name dnaprom \
+    --do_predict \
+    --data_dir $DATA_PATH  \
+    --max_seq_length 200 \
+    --per_gpu_pred_batch_size=128   \
+    --output_dir $MODEL_PATH \
+    --predict_dir $PREDICTION_PATH \
+    --n_process 12
 ```

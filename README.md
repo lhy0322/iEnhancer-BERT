@@ -3,7 +3,14 @@ We propose iEnhancer-BERT, a novel transfer learning method based on pre-trained
 
 
 ![Image browser window](figure.png)
-## 1. Environment setup
+
+## Citation
+If you have used iEhancer-BERT in your research, please kindly cite the following publication:
+
+Luo H, Chen C, Shan W, et al. iEnhancer-BERT: A Novel Transfer Learning Architecture Based on DNA-Language Model for Identifying Enhancers and Their Strength[C]//International Conference on Intelligent Computing. Springer, Cham, 2022: 153-165., https://link.springer.com/chapter/10.1007/978-3-031-13829-4_13
+
+
+### 1. Environment setup
 
 We recommend you to build a python virtual environment with [Anaconda](https://docs.anaconda.com/anaconda/install/linux/). We applied training on a single NVIDIA Tesla V100 with 32 GB graphic memory. If you use GPU with other specifications and memory sizes, consider adjusting your batch size accordingly.
 
@@ -28,7 +35,7 @@ python3 -m pip install --editable .
 cd examples
 python3 -m pip install -r requirements.txt
 ```
-## 2. Download pre-trained DNABERT
+### 2. Download pre-trained DNABERT
 The [DNABERT](https://github.com/jerryji1993/DNABERT) provides four pre-trained models that have been trained on the whole human genome. Please go to their github and download the corresponding k-mer pre-training model. Then unzip the package by running:
 ```
 unzip 3-new-12w-0.zip
@@ -36,7 +43,7 @@ unzip 4-new-12w-0.zip
 unzip 5-new-12w-0.zip
 unzip 6-new-12w-0.zip
 ```
-## 3. Model pipeline
+### 3. Model pipeline
 #### 3.1 Data processing
 Use "data_precess_layer1.py" file to generate k-mer sequences files from FASTA file (enhancer identification task)
 

@@ -7,7 +7,7 @@ We propose iEnhancer-BERT, a novel transfer learning method based on pre-trained
 ## Citation
 If you have used iEhancer-BERT in your research, please kindly cite the following publication:
 
-Luo H, Chen C, Shan W, et al. iEnhancer-BERT: A Novel Transfer Learning Architecture Based on DNA-Language Model for Identifying Enhancers and Their Strength[C]//International Conference on Intelligent Computing. Springer, Cham, 2022: 153-165. https://doi.org/10.1007/978-3-031-13829-4_13
+Luo, H., Chen, C., Shan, W., Ding, P., Luo, L. (2022). iEnhancer-BERT: A Novel Transfer Learning Architecture Based on DNA-Language Model for Identifying Enhancers and Their Strength. In: Huang, DS., Jo, KH., Jing, J., Premaratne, P., Bevilacqua, V., Hussain, A. (eds) Intelligent Computing Theories and Application. ICIC 2022. Lecture Notes in Computer Science, vol 13394. Springer, Cham. https://doi.org/10.1007/978-3-031-13829-4_13
 
 
 ### 1. Environment setup
